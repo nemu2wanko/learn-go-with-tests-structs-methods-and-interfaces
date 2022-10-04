@@ -7,11 +7,16 @@ type Rectangle struct {
 }
 
 // Perimeter returns the perimeter of a rectangle.
-func Perimeter(rectangle Rectangle) float64 {
-	return (rectangle.Width + rectangle.Width) * 2
+func (r Rectangle) Perimeter() float64 {
+	return (r.Width + r.Height) * 2
 }
 
 // Area returns the area of a rectangle.
-func Area(rectangle Rectangle) float64 {
-	return rectangle.Width * rectangle.Width
+func (r Rectangle) Area() float64 {
+	return r.Width * r.Height
 }
+
+// Circle represents a circle...
+// type Circle struct {
+// 	Radius float64
+// }
