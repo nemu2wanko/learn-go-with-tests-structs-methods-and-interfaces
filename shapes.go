@@ -1,5 +1,7 @@
 package main
 
+import "math"
+
 // Rectangle has the dimensions of a rectangle.
 type Rectangle struct {
 	Width  float64
@@ -17,6 +19,11 @@ func (r Rectangle) Area() float64 {
 }
 
 // Circle represents a circle...
-// type Circle struct {
-// 	Radius float64
-// }
+type Circle struct {
+	Radius float64
+}
+
+// Area returns the area of a circle.
+func (c Circle) Area() float64 {
+	return c.Radius * c.Radius * math.Pi
+}
